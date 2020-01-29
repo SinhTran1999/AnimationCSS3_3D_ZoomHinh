@@ -1,0 +1,70 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+.bo .chu2 {
+    top: 100px;
+    /*Thuoc tinh transition-delay:0.1s la di chuyen cham hon .chu1 la 0.1s*/
+    transition-delay: 0.1s;
+}
+.bo .chu3 {
+    top: 180px;
+     /*Thuoc tinh transition-delay:0.1s la di chuyen cham hon .chu1 la 0.2s*/
+    transition-delay:0.2s;
+    
+}
+.chu1, .chu2, .chu3 {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    background: white;
+    /*Thuoc tinh translateX(-400px) la dich chuyen tren truc 0x -400px*/
+    transform: translateX(-400px);
+    z-index: 2;
+    padding: 10px 19px;
+    transition: 0.4s;
+}
+
+.den {
+    height: 480px;
+    width: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000082;
+    transition: 0.4s;
+    /*opacity dat do mo ban dau la 0*/
+    opacity: 0;
+}
+
+img.anh {
+    transition: 0.4s;
+}
+
+.bo {
+    height: 480px;
+    width: 360px;
+    position: relative;
+    margin: auto;
+    /*An anh tran ra ben ngoai khi di chuyen chuot vao*/
+    overflow:hidden;
+}
+.bo:hover .anh{
+	/*Phong to anh 1.2 lan*/
+	transform:scale(1.2);
+}
+.bo:hover .den{
+	/*Khi di chuyen chuot vao thi anh se mau den*/
+	opacity:1;
+}
+.bo:hover .chu1{
+	/*Khi di chuyen chuot vao thi no tra lai vi tri ban dau*/
+	transform:translateX(0px);
+}
+.bo:hover .chu2{
+	transform:translateX(0px);
+}
+.bo:hover .chu3{
+	transform:translateX(0px);
+}
